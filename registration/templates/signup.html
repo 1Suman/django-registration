@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: #080710;
+        }
+        .container {
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 450px;
+            background: rgba(255,255,255,0.13);
+            padding: 40px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255,255,255,0.1);
+            box-shadow: 0 0 40px rgba(8,7,16,0.6);
+            color: #fff;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        label {
+            display: block;
+            margin-top: 20px;
+            font-weight: 500;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: none;
+            background: rgba(255,255,255,0.07);
+            color: #fff;
+        }
+        input::placeholder { color: #e5e5e5; }
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 5px;
+            background: #ffffff;
+            color: #080710;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        .link {
+            display: block;
+            text-align: center;
+            margin-top: 15px;
+            color: #fff;
+            text-decoration: none;
+        }
+        .background-shape {
+            position: absolute;
+            width: 200px; height: 200px;
+            border-radius: 50%;
+        }
+        .shape1 { top: -80px; left: -80px; background: linear-gradient(#1845ad, #23a2f6); }
+        .shape2 { bottom: -80px; right: -30px; background: linear-gradient(to right, #ff512f, #f09819); }
+    </style>
+</head>
+<body>
+    <div class="background-shape shape1"></div>
+    <div class="background-shape shape2"></div>
+    <div class="container">
+        <h2>Signup Here</h2>
+        <form method="post">
+            {% csrf_token %}
+            <label>Username</label>
+            <input type="text" name="username" placeholder="Enter Username" required>
+
+            <label>Email</label>
+            <input type="email" name="email" placeholder="Enter Email" required>
+
+            <label>Password</label>
+            <input type="password" name="password1" placeholder="Enter Password" required>
+
+            <label>Confirm Password</label>
+            <input type="password" name="password2" placeholder="Confirm Password" required>
+
+            <button type="submit">Signup</button>
+        </form>
+        <a class="link" href="{% url 'login' %}">I already have an account</a>
+    </div>
+</body>
+</html>
