@@ -120,6 +120,4 @@ http://127.0.0.1:8000/
 ## 👨‍💻 Author
 
 Suman  
-GitHub: https://github.com/1Suman
-
 ```
