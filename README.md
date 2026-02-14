@@ -10,7 +10,7 @@ Users can:
 This project is made for learning purposes.
 
 
-## 🛠 Technology Used
+## Technology Used
 
 - Python
 - Django 
@@ -20,20 +20,29 @@ This project is made for learning purposes.
 ## 📂 Project Structure
 
 ```
-django-registration/
+DJANGO/
 │
 ├── authentication/
-│   ├── views.py
-│   ├── urls.py
+│   ├── migrations/
+│   ├── admin.py
+│   ├── apps.py
 │   ├── models.py
-│   └── templates/
+│   ├── tests.py
+│   ├── urls.py
+│   └── views.py
+│
+├── registration/
+│   ├── app1/
+│   ├── registration/
+│   ├── templates/
+│   ├── db.sqlite3
+│   └── manage.py
 │
 ├── myproject/
-│   ├── settings.py
-│   ├── urls.py
+│   └── myproject/
 │
-├── db.sqlite3
-└── manage.py
+├── venv/
+└── .venv/
 ```
 
 
